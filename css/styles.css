@@ -127,16 +127,6 @@ header {
     transition-delay: 0.4s;
 }
 
-.hidden_selection {
-    background: transparent;
-    color: #333;
-}
-
-.show_selection {
-    background: #09f;
-    color: #fafafa;
-}
-
 
 /* background */
 .bg_img {
