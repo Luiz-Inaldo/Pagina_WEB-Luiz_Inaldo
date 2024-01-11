@@ -106,12 +106,12 @@
     
     #navbar {
         flex-direction: column;
-        height: 130px;
+        height: 150px;
         padding: .5rem 0;
     }
 
     #home {
-        margin: 160px 0 106px;
+        margin: 180px 0 106px;
         flex-direction: column-reverse;
     }
 
