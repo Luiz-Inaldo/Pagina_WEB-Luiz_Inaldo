@@ -1,27 +1,47 @@
-// const menu = {
-//     home: document.getElementById('home_menu_button'),
-//     about: document.getElementById('about_menu_button'),
-//     projects: document.getElementById('projects_menu_button'),
-//     contact: document.getElementById('contact_menu_button'),
-// };
+import projects from "./projects.js";
 
-// const sectionObserver = new IntersectionObserver((entry) => {
+const projectDiv = document.getElementById('projects_box')
 
-//     entry.forEach((e) => {
+for (let i = 0; i < projects.length; i++) {
+    
+    if (!projects[i].released) {
+        
+        projectDiv.innerHTML += `
+        
+            <div class="project_card">
+    
+                <img src="${projects[i].img}" alt="megaman_repo" class="card_img">
+                <h3 class="card_title">${projects[i].titulo}</h3>
+                <p class="card_description">${projects[i].descricao}</p>
+    
+                <div class="card_links">
+                    <a target="_blank" href="${projects[i].linkGitHub}">Link GitHub</a>
+                </div>
+    
+            </div>
+        
+        `;
 
-//         if (e.isIntersecting && e.target.id === 'home') {
-//             console.log(e)
-//             menu.home.setAttribute('class', 'show_selection');
-//         }
+    } else {
 
-//         if (e.isIntersecting && e.target.id === 'about') {
-//             console.log(e)
-//             menu.about.setAttribute('class', 'show_selection');
-//         }
-//     })
+        projectDiv.innerHTML += `
+        
+            <div class="project_card">
+    
+                <img src="${projects[i].img}" alt="megaman_repo" class="card_img">
+                <h3 class="card_title">${projects[i].titulo}</h3>
+                <p class="card_description">${projects[i].descricao}</p>
+    
+                <div class="card_links">
+                    <a target="_blank" href="${projects[i].linkGitHub}">Link GitHub</a>
+                    <a target="_blank" href="${projects[i].linkVercel}">Link Vercel</a>
+                </div>
+    
+            </div>
+        
+        `;
 
-// });
-
-// const sections = document.querySelectorAll('.section');
-
-// sections.forEach(element => { sectionObserver.observe(element) });
+    }
+    
+    
+}
