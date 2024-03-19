@@ -116,21 +116,24 @@
     }
     
     .navbar_links {
-        display: none;
-        transition: all 1s;
-    }
-
-    .navbar_links.active {
         display: inline-flex;
         flex-direction: column;
         background: #fff;
-        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
         position: fixed;
-        padding: 15px 70px;
-        gap: 30px;
-        right: 10px;
+        height: 0;
+        overflow: hidden;
+        padding: 0;
+        right: 50px;
         top: 75px;
-        transition: all 1s;
+        transition: all .5s;
+    }
+
+    .navbar_links.active {
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+        gap: 30px;
+        padding: 15px 70px;
+        height: auto;
+        transition: all .5s;
     }
 
     /* reseting the default animation configs */

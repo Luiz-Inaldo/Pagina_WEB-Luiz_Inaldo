@@ -7,7 +7,16 @@ async function engage() {
     // mostrando o menu hamburguer (responsividade mobile)
     document.getElementById('menu').addEventListener('click', () => {
         document.querySelector('.navbar_links').classList.toggle('active');
-    })
+    });
+
+    // desativando o menu hamburguer quando clicar em qualquer link
+    let links = document.querySelectorAll(".navbar_links a");
+    links.forEach(link => {
+        link.addEventListener('click', (event) => {
+            console.log(event);
+            // document.querySelector('.navbar_links').classList.remove('active');
+        });
+    });
 
     // renderizando os projetos na tela
     const projectDiv = document.getElementById('projects_box')
