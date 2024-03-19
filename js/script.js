@@ -12,9 +12,8 @@ async function engage() {
     // desativando o menu hamburguer quando clicar em qualquer link
     let links = document.querySelectorAll(".navbar_links a");
     links.forEach(link => {
-        link.addEventListener('click', (event) => {
-            console.log(event);
-            // document.querySelector('.navbar_links').classList.remove('active');
+        link.addEventListener('click', () => {
+            document.querySelector('.navbar_links').classList.remove('active');
         });
     });
 
